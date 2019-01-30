@@ -15,8 +15,9 @@ npm install resolve-http
 * parser
 
 ```js
-const path = 'https://github.com/OpenZeppelin/openzeppelin-solidity/contracts/math/SafeMath.sol';
-let content = await github.parser(path);
+const resolveHttp = require('resolve-http');
+const path = 'http://raw.githubusercontent.com/OpenZeppelin/openzeppelin-solidity/master/contracts/math/SafeMath.sol';
+let content = await resolveHttp.parser(path);
 ```
 
 ## License
